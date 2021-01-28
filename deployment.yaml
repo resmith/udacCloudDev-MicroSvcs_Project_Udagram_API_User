@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-api-user
+  name: udagram-api-users
   labels:
-    app: udagram-api-user
+    app: udagram
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-api-user
+      app: udagram-api-users
   template:
     metadata:
       labels:
-        app: udagram-api-user
+        app: udagram-api-users
     spec:
       containers:
-      - name: udagram-api-user
+      - name: udagram-api-users
         image: theresmith/udagram_api_user
         # image: ubuntu:groovy
         imagePullPolicy: "Always"
